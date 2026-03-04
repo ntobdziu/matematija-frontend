@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api';
+const API = 'https://matematija-backend-production.up.railway.app/api';
 
 const headers = () => ({
   'Content-Type': 'application/json',
