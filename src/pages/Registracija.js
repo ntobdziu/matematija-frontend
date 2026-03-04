@@ -39,16 +39,11 @@ export default function Registracija() {
         razred: form.razred ? parseInt(form.razred) : null
       });
 
-      // PROMJENA: Umjesto prijave, redirect na verifikaciju
-      /*if (res.korisnikId) {
-        navigate('/verifikuj-email', { state: { korisnikId: res.korisnikId, email: form.email } });
-      } 
-      */
+      // Automatska prijava nakon registracije (bez email verifikacije)
       if (res.token) {
-      prijava(res.token, res.korisnik);
-      setSubmitted(true);
-      }
-      else {
+        prijava(res.token, res.korisnik);
+        setSubmitted(true);
+      } else {
         setError(res.poruka || 'Greška pri registraciji.');
       }
     } catch (err) {
@@ -87,7 +82,7 @@ export default function Registracija() {
         <div className="auth-panel reg-panel">
           <div className="auth-panel-inner">
             <div className="auth-panel-logo">
-              <span>∑</span>
+              <span></span>
               <span>Matema<em>TI</em>&amp;JA</span>
             </div>
             <h2>Pridruži se! 🚀</h2>
