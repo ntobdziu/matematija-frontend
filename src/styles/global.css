@@ -1,0 +1,113 @@
+/* =============================================
+   MatemaTI&JA - Global Styles
+   Veseo, šaren dizajn za decu!
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap');
+
+:root {
+  --purple: #7C3AED;
+  --purple-light: #A78BFA;
+  --purple-dark: #5B21B6;
+  --yellow: #FBBF24;
+  --yellow-light: #FDE68A;
+  --orange: #F97316;
+  --orange-light: #FED7AA;
+  --pink: #EC4899;
+  --pink-light: #FBCFE8;
+  --green: #10B981;
+  --green-light: #A7F3D0;
+  --blue: #3B82F6;
+  --blue-light: #BFDBFE;
+  --teal: #14B8A6;
+  --white: #FFFFFF;
+  --bg: #FFF9F0;
+  --text-dark: #1E1B4B;
+  --text-mid: #4C1D95;
+  --shadow: 0 8px 32px rgba(124, 58, 237, 0.15);
+  --shadow-hover: 0 12px 40px rgba(124, 58, 237, 0.25);
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-lg: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka One', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Floating math symbols background animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(20px) rotate(-10deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.3); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.8); }
+}
+
+.page-enter {
+  animation: slide-up 0.5s ease forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--purple-light);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 10px;
+}

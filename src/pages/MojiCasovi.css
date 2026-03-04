@@ -1,0 +1,291 @@
+.moji-page {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.moji-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, #1E1B4B, #4C1D95);
+  border-radius: 28px;
+  padding: 36px 40px;
+  color: white;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 99px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.moji-header-left h1 { font-size: 34px; margin-bottom: 6px; }
+.moji-header-left p { font-size: 16px; color: #C4B5FD; font-weight: 600; }
+
+.moji-avatar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 14px 20px;
+}
+
+.avatar-circle {
+  font-size: 44px;
+  width: 68px;
+  height: 68px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-name {
+  display: block;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  color: white;
+}
+
+.avatar-role {
+  display: block;
+  font-size: 13px;
+  color: #C4B5FD;
+  font-weight: 700;
+}
+
+/* Stats */
+.moji-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.moji-stat {
+  background: var(--s-bg);
+  border-radius: 18px;
+  padding: 20px 16px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: transform 0.2s;
+}
+
+.moji-stat:hover { transform: translateY(-4px); }
+
+.ms-icon { display: block; font-size: 28px; margin-bottom: 6px; }
+.ms-num {
+  display: block;
+  font-family: 'Fredoka One', cursive;
+  font-size: 30px;
+  color: var(--s-color);
+}
+.ms-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Filter */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 9px 22px;
+  border-radius: 99px;
+  border: 2.5px solid #E5E7EB;
+  background: white;
+  font-size: 14px;
+  font-weight: 700;
+  color: #6B7280;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #7C3AED;
+  color: #7C3AED;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #7C3AED, #EC4899);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* List */
+.casovi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.cas-item {
+  background: white;
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border: 2px solid #F3F4F6;
+  transition: all 0.2s;
+}
+
+.cas-item:hover {
+  transform: translateX(4px);
+  border-color: #EDE9FE;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.1);
+}
+
+.cas-item.otkazan {
+  opacity: 0.6;
+}
+
+.cas-item-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.cas-item-info {
+  flex: 1;
+}
+
+.cas-item-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.cas-item-tip {
+  font-family: 'Fredoka One', cursive;
+  font-size: 17px;
+  color: #1E1B4B;
+}
+
+.cas-status-badge {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 99px;
+}
+
+.cas-status-badge.predstojeći { background: #EDE9FE; color: #7C3AED; }
+.cas-status-badge.završen { background: #ECFDF5; color: #10B981; }
+.cas-status-badge.otkazan { background: #FEF2F2; color: #EF4444; }
+
+.cas-item-datum {
+  font-size: 14px;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.cas-ocena {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.star {
+  font-size: 18px;
+  color: #E5E7EB;
+}
+
+.star.filled {
+  color: #FBBF24;
+}
+
+.ocena-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6B7280;
+  margin-left: 8px;
+}
+
+.otkazivanje-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 2px solid #FEE2E2;
+  background: #FEF2F2;
+  color: #EF4444;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.otkazivanje-btn:hover {
+  background: #EF4444;
+  color: white;
+  border-color: #EF4444;
+}
+
+.otkazan-tag {
+  font-size: 13px;
+  font-weight: 800;
+  color: #6B7280;
+  background: #F3F4F6;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px;
+  color: #9CA3AF;
+  font-size: 18px;
+  font-weight: 600;
+}
+.empty-state span { display: block; font-size: 48px; margin-bottom: 12px; }
+
+.reminder-card {
+  background: #FFF7ED;
+  border: 2px solid #FBBF24;
+  border-radius: 16px;
+  padding: 18px 24px;
+  display: flex;
+  gap: 12px;
+  font-size: 15px;
+  color: #92400E;
+  font-weight: 600;
+}
+.reminder-card span { font-size: 24px; flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .moji-stats { grid-template-columns: repeat(2, 1fr); }
+  .moji-header { padding: 28px 24px; }
+  .cas-item { padding: 16px; gap: 12px; }
+}
