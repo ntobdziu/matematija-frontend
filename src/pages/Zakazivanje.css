@@ -175,7 +175,7 @@
   padding: 24px 28px;
   box-shadow: 0 8px 28px rgba(124, 58, 237, 0.1);
   border: 2px solid #EDE9FE;
-  animation: slide-up 0.4s ease forwards;
+  /* animation: slide-up 0.4s ease forwards; */
 }
 
 .termini-card h3 {
@@ -402,10 +402,10 @@
   text-align: center;
   box-shadow: 0 20px 60px rgba(124, 58, 237, 0.15);
   border: 3px solid #EDE9FE;
-  animation: bounce-in 0.6s ease forwards;
+  /* animation: bounce-in 0.6s ease forwards; */
 }
 
-.success-icon { font-size: 72px; margin-bottom: 20px; animation: wiggle 2s ease infinite; }
+.success-icon { font-size: 72px; margin-bottom: 20px; /*animation: wiggle 2s ease infinite;*/ }
 .success-card h2 { font-size: 32px; color: #1E1B4B; margin-bottom: 14px; }
 .success-card p { font-size: 17px; color: #4C1D95; font-weight: 600; }
 
