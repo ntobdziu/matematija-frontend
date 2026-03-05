@@ -8,7 +8,7 @@ export default function Registracija() {
   const navigate = useNavigate();
   const { prijava } = useAuth();
   const [form, setForm] = useState({
-    ime: '', prezime: '', email: '', lozinka: '', potvrdaLozinke: '', razred: '', uloga: 'ucenik'
+    ime: '', prezime: '', email: '', lozinka: '', potvrdaLozinke: '', razred: ''
   });
   const [showPass, setShowPass] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -35,7 +35,7 @@ export default function Registracija() {
         prezime: form.prezime,
         email: form.email,
         lozinka: form.lozinka,
-        uloga: form.uloga === 'profesor' ? 'Profesor' : 'Ucenik',
+        uloga: 'Ucenik',
         razred: form.razred ? parseInt(form.razred) : null
       });
 
@@ -113,23 +113,6 @@ export default function Registracija() {
 
             <form onSubmit={handleSubmit} autoComplete="off">
 
-              {/* Role select */}
-              <div className="auth-field">
-                <label>Registruj se kao</label>
-                <div className="role-toggle">
-                  {['ucenik', 'profesor'].map(r => (
-                    <button
-                      type="button"
-                      key={r}
-                      className={`role-toggle-btn ${form.uloga === r ? 'active' : ''}`}
-                      onClick={() => setForm({...form, uloga: r})}
-                    >
-                      {r === 'ucenik' ? '👤 Učenik' : '👩‍🏫 Profesor'}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               <div className="auth-row">
                 <div className="auth-field">
                   <label>Ime *</label>
@@ -179,29 +162,27 @@ export default function Registracija() {
                 </div>
               </div>
 
-              {form.uloga === 'ucenik' && (
-                <div className="auth-field">
-                  <label>Razred</label>
-                  <div className="input-wrap">
-                    <span className="input-icon">📚</span>
-                    <select
-                      value={form.razred}
-                      onChange={e => setForm({...form, razred: e.target.value})}
-                      style={{
-                        width: '100%', padding: '14px 16px 14px 48px',
-                        border: 'none', background: 'transparent',
-                        fontFamily: 'Nunito, sans-serif', fontSize: '15px',
-                        color: form.razred ? '#1E1B4B' : '#9CA3AF'
-                      }}
-                    >
-                      <option value="">Izaberi razred</option>
-                      {[1,2,3,4,5,6,7,8].map(r => (
-                        <option key={r} value={r}>{r}. razred</option>
-                      ))}
-                    </select>
-                  </div>
+              <div className="auth-field">
+                <label>Razred</label>
+                <div className="input-wrap">
+                  <span className="input-icon">📚</span>
+                  <select
+                    value={form.razred}
+                    onChange={e => setForm({...form, razred: e.target.value})}
+                    style={{
+                      width: '100%', padding: '14px 16px 14px 48px',
+                      border: 'none', background: 'transparent',
+                      fontFamily: 'Nunito, sans-serif', fontSize: '15px',
+                      color: form.razred ? '#1E1B4B' : '#9CA3AF'
+                    }}
+                  >
+                    <option value="">Izaberi razred</option>
+                    {[1,2,3,4,5,6,7,8].map(r => (
+                      <option key={r} value={r}>{r}. razred</option>
+                    ))}
+                  </select>
                 </div>
-              )}
+              </div>
 
               <div className="auth-field">
                 <label>Lozinka *</label>

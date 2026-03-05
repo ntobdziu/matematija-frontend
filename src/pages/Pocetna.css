@@ -230,22 +230,22 @@
 .hero-shape.s1 {
   background: #FBBF24; color: white;
   top: -20px; left: -20px;
-  animation: float 3s ease-in-out infinite;
+  /* animation: float 3s ease-in-out infinite; */
 }
 .hero-shape.s2 {
   background: #EC4899; color: white;
   bottom: -20px; left: -20px;
-  animation: floatReverse 4s ease-in-out infinite;
+  /* animation: floatReverse 4s ease-in-out infinite; */
 }
 .hero-shape.s3 {
   background: #10B981; color: white;
   top: -20px; right: -20px;
-  animation: float 3.5s ease-in-out 0.5s infinite;
+  /* animation: float 3.5s ease-in-out 0.5s infinite; */
 }
 .hero-shape.s4 {
   background: #3B82F6; color: white;
   bottom: -20px; right: -20px;
-  animation: floatReverse 4.5s ease-in-out 1s infinite;
+  /* animation: floatReverse 4.5s ease-in-out 1s infinite; */
 }
 
 /* ===== STATS ===== */

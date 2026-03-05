@@ -78,7 +78,7 @@ export default function Pocetna() {
         <div className="hero-card">
           <div className="hero-card-inner">
             <div className="calc-display">
-              <span className="calc-sym">∑</span>
+              <span className="calc-sym"></span>
               <span className="calc-eq">2 + 2 = ?</span>
             </div>
             <div className="calc-options">
