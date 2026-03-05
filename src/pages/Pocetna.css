@@ -54,7 +54,7 @@
   max-width: 560px;
   position: relative;
   z-index: 1;
-  animation: slide-up 0.7s ease forwards;
+  /* animation: slide-up 0.7s ease forwards; */
 }
 
 .hero-badge {
@@ -133,7 +133,7 @@
 .hero-card {
   flex-shrink: 0;
   position: relative;
-  animation: bounce-in 0.8s ease 0.3s both;
+  /* animation: bounce-in 0.8s ease 0.3s both; */
 }
 
 .hero-card-inner {
@@ -200,7 +200,7 @@
   color: white;
   border-color: #10B981;
   box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
-  animation: wiggle 1s ease infinite;
+  /* animation: wiggle 1s ease infinite; */
 }
 
 .calc-result {
@@ -210,7 +210,7 @@
   padding: 12px;
   font-weight: 800;
   font-size: 16px;
-  animation: pulse-glow 2s ease infinite;
+  /* animation: pulse-glow 2s ease infinite; */
 }
 
 /* Decorative math shapes */
