@@ -15,6 +15,7 @@ const symbols = [
   { sym: '⬡', x: 78, y: 55, size: 32, color: '#F97316', delay: 3.5, dur: 6.2 },
 ];
 
+/*
 export default function MathBackground() {
   return (
     <div style={{
@@ -46,4 +47,9 @@ export default function MathBackground() {
       ))}
     </div>
   );
+}
+*/
+
+export default function MathBackground() {
+  return null; // Ne renderuje ništa
 }
